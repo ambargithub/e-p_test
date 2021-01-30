@@ -6,6 +6,9 @@
 
 // Appending image to SVG //
 
+
+
+
 var u = d3.select("#stoma-2")
 .append("image")
 .attr("width",450)
