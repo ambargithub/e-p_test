@@ -35,7 +35,8 @@
     right: -395px;
     bottom: 0px;  
     left: 0 px;
-    width: 1200px;   
+    width: 1200px;
+    z-index: 12;   
 }   
    
 #sent-1 {
@@ -62,7 +63,7 @@
 
 .two {
     position: relative;
-    top: -60px;
+    top: -70px;
     right: -168px;
     bottom: 0px;  
     left: 0 px;
@@ -71,7 +72,7 @@
 } 
 #sent-2{
     position: relative;
-    top: 27px;
+    top: 30px;
     right: -20px;
     bottom: 500px;  
     left: 40 px;
@@ -112,40 +113,49 @@
 
 .four-five {
         position: relative;
-        top: -34px;
-        right: 142px;
+        top: -524px;
+        right: -382px;
         bottom: 0px;  
         left: 0 px;
         width: 990px;  
-        z-index: 11;   
+        z-index: 0;   
     } 
+    
 #sent-4{
             position: relative; 
-            top: 33px;
-            right: -70px;
+            top: 478px;
+            right: 190px;
             bottom: 500px;  
             left: 40 px;
             width: 1800px;
+            z-index: 12;
+            
             }
-
 #slider-4{ 
+    position: relative;
+    right: 257px;
     width: 440px;
+    z-index: 11;
 }
 #slider-5{
-    width: 154px;
+    position: relative;
+    top: -44px;
+    right: -70px;
+    width: 170px;
 }
+
 #arrow{
     position: relative;
-    top: 48px;
-    right: 678px;
+    top: 248px;
+    right: 96px;
     width: 140px;
     height: 120px;
     z-index : -1;}
 
 #arrow1{
         position: relative;
-        top: -220px;
-        right: -518px;
+        top: 270px;
+        right: -380px;
         width: 450px;
         height: 450px;
         z-index : -1;}
@@ -156,8 +166,8 @@
 
 .six-seven {
         position: relative;
-        top: -590px;
-        right: -231px;
+        top:  -560px;
+        right: -221px;
         bottom: 0px;  
         left: 0 px;
         width: 1695px; 
@@ -170,14 +180,20 @@
         bottom: 500px;  
         left: 40 px;
         width: 1595px;
+        z-index: 12;
         }
 
 #slider-6{ 
-    width: 380px;
+    position: relative; 
+    right: 605px;
+    width: 364px;
     height: 34px;
 }
 #slider-7{
-    width: 615px;
+    position: relative; 
+    top: -33px;
+    right: 60px;
+    width: 620px;
     height: 34px;
 }
 
@@ -201,7 +217,9 @@
     z-index : 1 ;}
 
 #slider-8{
-    width: 595px;
+    position: relative; 
+    right: 175px;
+    width: 635px;
     height: 34px;
 }
 
