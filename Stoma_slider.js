@@ -5,6 +5,7 @@
 //})
 
 // Appending image to SVG //
+
 var u = d3.select("#stoma-2")
 .append("image")
 .attr("width",450)
@@ -30,6 +31,8 @@ var t = d3.select("#stoma")
 }))
 */
 //Slider 1 animation//
+
+console.log()
 d3.select("#slider-1").on("input", function(){
   let i = parseInt(d3.select(this).property('value'));
 var w = 1200-(16*i+5)
@@ -56,6 +59,7 @@ d3.select("#slider-2").on("input", function(){
 if(i % 3 == 0 ){t.attr("xlink:href","Images_1\\leaf_label_a1.jpg").attr("visibility","").attr("width",459).attr("height",459).attr("x",-88).attr("y",-42)}
 else if(i % 3 == 1){t.attr("xlink:href","Images_1\\leaf_label_a2.jpg").attr("width",459).attr("height",459).attr("x",-88).attr("y",-42)}
 else if(i %3  == 2){t.attr("xlink:href","Images_1\\leaf_label_a3.jpg").attr("width",459).attr("height",459).attr("x",-88).attr("y",-42)}
+u.attr("visibility","")
 })
 
 //Slider 3 animation - mix of 1 and 2
@@ -78,15 +82,15 @@ d3.select("#slider-4").on("input", function(){
   var w = i*9 + 408;
   console.log(w)
   var h = i*9 + 308;
-if(i <40 ){t.attr("xlink:href","Images_1\\P3.jpg").attr("width",w).attr("height",h).attr("visibility","")}
+if(i <40 ){t.attr("xlink:href","Images_1\\P3.jpg").attr("width",w).attr("height",h).attr("visibility","").attr("x",0).attr("y",0.5)}
 /*
 if(i>=40 & i % 3 == 0){t.attr("xlink:href","P3_water1.jpg").attr("width",759).attr("height",659)}
 else if(i>40 & i % 3 == 1){t.attr("xlink:href","P3_water2.jpg").attr("width",759).attr("height",659)}
 else if(i>40 & i % 3 == 2){t.attr("xlink:href","P3_water3.jpg").attr("width",759).attr("height",659)}
 */
-if(i>40 & i % 3 == 0){t.attr("xlink:href","Images_1\\P3_H2O1.jpg").attr("width",759).attr("height",659)}
-else if(i>40 & i % 3 == 1){t.attr("xlink:href","Images_1\\P3_H202.jpg").attr("width",759).attr("height",659)}
-else if(i>80 & i % 3 == 2){t.attr("xlink:href","Images_1\\P3_H2O3.jpg").attr("width",759).attr("height",659)}
+if(i>40 & i % 3 == 0){t.attr("xlink:href","Images_1\\P3_H2O1.jpg").attr("width",759).attr("height",659).attr("x",0).attr("y",0.5)}
+else if(i>40 & i % 3 == 1){t.attr("xlink:href","Images_1\\P3_H202.jpg").attr("width",759).attr("height",659).attr("x",0).attr("y",0.5)}
+else if(i>80 & i % 3 == 2){t.attr("xlink:href","Images_1\\P3_H2O3.jpg").attr("width",759).attr("height",659).attr("x",0).attr("y",0.5)}
 u.attr("xlink:href","Images_1\\Gist_Leaf.jpg").attr("visibility","")
 /*
 if(i>89 & i % 3 == 0){t.attr("xlink:href","P3_pore1.jpg").attr("width",759).attr("height",659)}
@@ -94,17 +98,18 @@ else if(i>89 & i % 3 == 1){t.attr("xlink:href","P3_pore2.jpg").attr("width",759)
 else if(i>90 & i % 3 == 2){t.attr("xlink:href","P3_pore3.jpg").attr("width",759).attr("height",659)}
 */
 })
-//Slider 8 animation [Pore closing]
-d3.select("#slider-8").on("input", function(){
+//Slider 5 animation [Pore closing]
+d3.select("#slider-5").on("input", function(){
   let i = parseInt(d3.select(this).property('value'));
-if(i<5){t.attr("xlink:href","Images_1\\P3_pore1.jpg").attr("width",759).attr("height",659).attr("visibility","")}
-if(i>5){t.attr("xlink:href","Images_1\\P3_pore2.jpg").attr("width",759).attr("height",659)}
-if(i>15){t.attr("xlink:href","Images_1\\P3_pore3.jpg").attr("width",759).attr("height",659)}
+if(i<5){t.attr("xlink:href","Images_1\\P3_pore1.jpg").attr("width",759).attr("height",659).attr("visibility","").attr("x",0).attr("y",-20)}
+if(i>5){t.attr("xlink:href","Images_1\\P3_pore2.jpg").attr("width",759).attr("height",659).attr("x",0).attr("y",-20)}
+if(i>15){t.attr("xlink:href","Images_1\\P3_pore3.jpg").attr("width",759).attr("height",659).attr("x",0).attr("y",-20)}
+u.attr("visibility","")
 })
 
-//Slider 5 animation [Guard cells]
+//Slider 6 animation [Guard cells]
 
-d3.select("#slider-5").on("input", function(){
+d3.select("#slider-6").on("input", function(){
   let i = parseInt(d3.select(this).property('value'));
   var w = i*2+ 759;
   var h = i*2 + 659;
@@ -117,8 +122,8 @@ u.attr("xlink:href","Images_1\\Gist_Stomata.jpg").attr("y",30).attr("visibility"
 })
 
 
-//Slider 6 animation [Guard cells - water in]
-d3.select("#slider-6").on("input", function(){
+//Slider 7 animation [Guard cells - water in]
+d3.select("#slider-7").on("input", function(){
   let i = d3.select(this).property('value');
   if(i % 4 == 0 ){t.attr("xlink:href","Images_1\\stoma_closed_arrows1.jpg").attr("width",330).attr("height",300).attr("x",0).attr("y",50).attr("visibility","")}
   else if(i % 4 == 1){t.attr("xlink:href","Images_1\\stoma_closed_arrows2.jpg").attr("width",330).attr("height",300).attr("x",0).attr("y",50)}
@@ -128,8 +133,8 @@ d3.select("#slider-6").on("input", function(){
   u.attr("xlink:href","Images_1\\Gist_Stomata.jpg").attr("y",30).attr("visibility","")
 })
 
-//Slider 7 animation [Guard cells - water out]
-d3.select("#slider-7").on("input", function(){
+//Slider 8 animation [Guard cells - water out]
+d3.select("#slider-8").on("input", function(){
   let i = d3.select(this).property('value');
   if(i % 4 == 0 ){t.attr("xlink:href","Images_1\\stoma_open_arr1.jpg").attr("width",330).attr("height",300).attr("x",0).attr("y",50).attr("visibility","")}
   else if(i % 4 == 1){t.attr("xlink:href","Images_1\\stoma_open_arr2.jpg").attr("width",330).attr("height",300).attr("x",0).attr("y",50)}
